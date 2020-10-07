@@ -18,8 +18,8 @@ wget https://www.python.org/ftp/python/$version/Python-$version.tgz
 tar -xvf Python-$version.tgz && mkdir /usr/local/python3 && cd Python-$version
 ./configure --prefix=/usr/local/python3 && make && make install
 if test $[python3 -V]==0; then echo '安装成功'; else echo'安装出错！';fi
-ln -s /usr/local/python3/bin/python3.8 /usr/bin/python3
-ln -s /usr/local/python3/bin/pip3.8 /usr/bin/pip3
+ln -f /usr/local/python3/bin/python3.8 /usr/bin/python3
+ln -f /usr/local/python3/bin/pip3.8 /usr/bin/pip3
 PATH=$PATH:/usr/bin/python3
 echo '安装完成'
 read -p '回车查看版本' V
