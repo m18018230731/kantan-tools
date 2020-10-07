@@ -9,8 +9,10 @@ py main.py test.csv 100mb
 #### [下载页面内容](https://github.com/m18018230731/kantan-tools/tree/master/%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9)
 ```python
 py main.py https://google.com
+```
 
 #### [Centos7一键安装python3](https://github.com/m18018230731/kantan-tools/tree/master/Centos7%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85python3)
 ```linux
 chmod +x ./install.sh
 ./install.sh
+```
