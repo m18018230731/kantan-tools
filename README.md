@@ -16,3 +16,8 @@ py main.py https://google.com
 chmod +x ./install.sh
 ./install.sh
 ```
+
+#### [生成随机数组](https://github.com/m18018230731/kantan-tools/tree/master/%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%BB%84)
+```python
+py main.py 1 100
+```
