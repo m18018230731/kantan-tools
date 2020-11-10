@@ -26,6 +26,8 @@ systemctl start tinyproxy.service
 wget https://raw.githubusercontent.com/qinghuas/socks5-install/master/socks5.sh;bash socks5.sh
 socks5 install
 socks5 user add rabproxy 12z991
+wget https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/ss5
+mv -f ss5 /etc/init.d/ss5
 socks5 start
 # completed
 echo "Completed!"
