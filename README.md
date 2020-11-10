@@ -21,3 +21,8 @@ chmod +x ./install.sh
 ```python
 py main.py 1 100
 ```
+
+#### [一键反代并安装代理软件](https://github.com/m18018230731/kantan-tools/tree/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86)
+```linux
+wget -O -  https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/oneclick.sh| bash
+```
