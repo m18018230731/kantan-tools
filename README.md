@@ -1,5 +1,5 @@
 # kantan-tools
-used to store some script tools
+存放一些小工具。
 
 #### [生成指定大小的文件](https://github.com/m18018230731/kantan-tools/tree/master/%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E5%A4%A7%E5%B0%8F%E7%9A%84%E6%96%87%E4%BB%B6)
 ```python
@@ -25,10 +25,11 @@ py main.py 1 100
 #### [一键反代并安装代理软件](https://github.com/m18018230731/kantan-tools/tree/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86)
 ```linux
 setenforce 0
+yum -y install epel-release
 yum -y install wget
 wget -O -  https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/oneclick.sh| bash
 ```
-测试用（切换服务器或本机）:
+*测试用（切换服务器或本机）:*
 ```linux
 curl -x http://your_ip:18779 http://ip-api.com/json/?lang=zh-CN
 curl -x socks5://rabproxy:12z991@your_ip:15055 http://ip-api.com/json/?lang=zh-CN

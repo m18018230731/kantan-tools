@@ -1,13 +1,12 @@
-#! /bin/bash
+#!/bin/bash
 # python3.8.2 install
-# author:20th
-# https://github.com/clcc2019/install_python3/blob/master/py.sh
+# author: 20th
+# link: https://github.com/clcc2019/install_python3/blob/master/py.sh
 
 version='3.8.2'
 echo '自动安装python3.x程序，与服务器自带版本共存，使用请执行python3'
 
 #安装环境包
-#yum install vim -y
 yum -y install zlib zlib-devel bzip2 bzip2-devel ncurses ncurses-devel readline readline-devel openssl openssl-devel openssl-static xz lzma xz-devel sqlite sqlite-devel
 yum -y install gdbm gdbm-devel
 yum -y install tk tk-devel
