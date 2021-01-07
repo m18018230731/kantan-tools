@@ -30,11 +30,34 @@ systemctl enable nginx.service
 firewall-cmd --add-port=80/tcp --permanent
 
 # Tinyproxy 安装
-yum -y install tinyproxy
-wget https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/tinyproxy.conf
-mv -f tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
-systemctl start tinyproxy.service
-systemctl enable tinyproxy.service
+# === 1.08 版本 不支持用户密码访问 ===
+# yum -y install tinyproxy
+# wget https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/tinyproxy_1.08.conf -O tinyproxy.conf
+# mv -f tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
+# systemctl start tinyproxy.service
+# systemctl enable tinyproxy.service
+# === 1.11 版本 支持用户密码访问 ===
+# 卸载旧版本
+yum -y erase tinyproxy
+find / -name tinyproxy
+# 安装 C 编译器
+yum -y install gcc
+# 下载新版并编译安装
+wget https://github.com/tinyproxy/tinyproxy/releases/download/1.11.0-rc1/tinyproxy-1.11.0-rc1.tar.gz
+tar -zxvf tinyproxy-1.11.0-rc1.tar.gz
+cd tinyproxy-1.11.0-rc1
+./configure && 
+make && 
+make install
+cd ..
+# 下载配置文件
+wget https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/tinyproxy_1.11.conf -O tinyproxy.conf
+mv tinyproxy.conf /etc/tinyproxy/tinyproxy.conf
+# 自动启动
+wget https://raw.githubusercontent.com/m18018230731/kantan-tools/master/%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85nginx%E5%8F%8D%E4%BB%A3steam%20%E5%B9%B6%E5%AE%89%E8%A3%85socks%E5%92%8Chttp%E4%BB%A3%E7%90%86/tinyproxy.sh -O tinyproxy.sh
+chmod +x tinyproxy.sh
+sed '$a su - user -c "/root/tinyproxy.sh"' /etc/rc.d/rc.local
+chmod +x /etc/rc.d/rc.local
 firewall-cmd --add-port=18779/tcp --permanent
 
 # Socks5 安装（由于滥用暂时废弃）
