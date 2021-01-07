@@ -31,6 +31,6 @@ chmod +x oneclick.sh
 ```
 *测试用（切换服务器或本机）:*
 ```linux
-curl -x http://your_ip:18779 http://ip-api.com/json/?lang=zh-CN
+curl -x http://rabproxy:12z991@your_ip:18779 http://ip-api.com/json/?lang=zh-CN
 curl -x socks5://rabproxy:12z991@your_ip:15055 http://ip-api.com/json/?lang=zh-CN
 ```
