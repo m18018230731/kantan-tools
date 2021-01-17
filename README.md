@@ -13,6 +13,7 @@ py main.py https://google.com
 
 #### [Centos7一键安装python3](https://github.com/m18018230731/kantan-tools/tree/master/Centos7%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85python3)
 ```linux
+wget https://raw.githubusercontent.com/senjianlu/kantan-tools/master/Centos7%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85python3/install.sh
 chmod +x ./install.sh
 ./install.sh
 ```
