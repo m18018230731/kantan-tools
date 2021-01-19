@@ -11,7 +11,7 @@ py main.py test.csv 100mb
 py main.py https://google.com
 ```
 
-#### [Centos7一键安装python3](https://github.com/senjianlu/kantan-tools/tree/master/Centos7%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%20Python3)
+#### [Centos7 一键安装 Python3](https://github.com/senjianlu/kantan-tools/tree/master/Centos7%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%20Python3)
 ```linux
 wget https://raw.githubusercontent.com/senjianlu/kantan-tools/master/Centos7%20%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%20Python3/install.sh
 chmod +x ./install.sh
