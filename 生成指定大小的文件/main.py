@@ -1,11 +1,25 @@
 #!/usr/bin/env python
 # -*- coding:UTF-8 -*-
+#
+# @AUTHOR: Rabbir
+# @FILE: /root/Github/kantan-tools/生成指定大小的文件/main.py
+# @DATE: 2021/01/19 Tue
+# @TIME: 17:21:11
+#
+# @DESCRIPTION: 生成指定大小的文件
 
 
 import os
 import random
 
 
+"""
+@description: 生成指定大小的文件
+-------
+@param:
+-------
+@return:
+"""
 def gen_size_file(file_name, file_size):
     # file path
     file_path = file_name
@@ -15,6 +29,13 @@ def gen_size_file(file_name, file_size):
     file.close()
     print("done!")
 
+"""
+@description: 从输入中获取所需生成文件的大小
+-------
+@param:
+-------
+@return:
+"""
 def get_file_size():
     # start here
     file_name = input("The file name you need:")
@@ -30,7 +51,13 @@ def get_file_size():
         file_size = int(file_size)*1024
     return file_name, file_size
 
-# main
+"""
+@description: 单体测试
+-------
+@param:
+-------
+@return:
+"""
 if __name__ == "__main__":
     file_name, file_size = get_file_size()
     try:
