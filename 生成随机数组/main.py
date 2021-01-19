@@ -1,11 +1,24 @@
 #!/usr/bin/env python
 # -*- coding:UTF-8 -*-
+#
+# @AUTHOR: Rabbir
+# @FILE: /root/Github/kantan-tools/生成随机数组/main.py
+# @DATE: 2021/01/19 Tue
+# @TIME: 17:22:20
+#
+# @DESCRIPTION: 生成随机数组以供测试使用
 
 
 import random
 
 
-# main
+"""
+@description: 单体测试
+-------
+@param:
+-------
+@return:
+"""
 if __name__ == "__main__":
     try:
         start_num = int(input("Start number:"))
