@@ -154,15 +154,27 @@ def parse_ssr_origin_info(ssr_origin_info):
                             .split("&")[1].split("=")[1]).decode("UTF-8")
     # === SSR 其他信息 ===
     # 备注
-    ssr_remarks = my_b64decode(ssr_origin_info.split("/?")[1].split("&")[2] \
-                    .split("=")[1]).decode("UTF-8")
+    try:
+        ssr_remarks = my_b64decode(ssr_origin_info.split("/?")[1]
+                        .split("&")[2].split("=")[1]).decode("UTF-8")
+    except Exception:
+        ssr_remarks = ""
     # 分组
-    ssr_group = my_b64decode(ssr_origin_info.split("/?")[1].split("&")[3] \
-                    .split("=")[1]).decode("UTF-8")
+    try:
+        ssr_group = my_b64decode(ssr_origin_info.split("/?")[1].split("&")[3] \
+                        .split("=")[1]).decode("UTF-8")
+    except Exception:
+        ssr_group = ""
     # udpport
-    ssr_udpport = ssr_origin_info.split("/?")[1].split("&")[4].split("=")[1]
+    try:
+        ssr_udpport = ssr_origin_info.split("/?")[1].split("&")[4].split("=")[1]
+    except Exception:
+        ssr_udpport = ""
     # uot
-    ssr_uot = ssr_origin_info.split("/?")[1].split("&")[5].split("=")[1]
+    try:
+        ssr_uot = ssr_origin_info.split("/?")[1].split("&")[5].split("=")[1]
+    except Exception:
+        ssr_uot = ""
     # 拼接
     ssr_info = {
         "ip": ssr_ip,
