@@ -9,6 +9,7 @@
 # @DESCRIPTION: PDF 转图片
 
 
+import sys
 import fitz
 
 
@@ -30,8 +31,18 @@ def get_pdf_file(pdf_file_path):
 @return:
 """
 if __name__ == "__main__":
-    pdf_file = get_pdf_file("单词.pdf")
-    for page_no in range(0, 37):
-        page = pdf_file.loadPage(page_no)
-        pix = page.getPixmap()
-        pix.writePNG(str(page_no) + ".png")
+    pdf_file_name = sys.argv[1]
+    if (".pdf" not in pdf_file_name):
+        pdf_file_name = pdf_file_name + ".pdf"
+    pdf_file = get_pdf_file(pdf_file_name)
+    print("PDF 总共有：" + str(pdf_file.pageCount) + " 页。")
+    try:
+        for page_no in range(0, pdf_file.pageCount):
+            page = pdf_file.loadPage(page_no)
+            pix = page.getPixmap()
+            pix.writePNG("图片/" + str(page_no) + ".png")
+    except Exception as e:
+        print("出错：" + str(e))
+    finally:
+        pdf_file.close()
+    print("完成！ ")
