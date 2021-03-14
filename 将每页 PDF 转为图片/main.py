@@ -44,7 +44,6 @@ def cut_image(image, image_file_name, count):
     image_list = [image.crop(box) for box in box_list]
     # 保存图片
     for image_index, image in enumerate(image_list):
-        
         image.save("图片/切割后/" + image_file_name + "-" + str(image_index) \
                     + ".png", "PNG")
 
